@@ -36,7 +36,7 @@ st.title('Painel de Reclamações de Empresas')
 empresas_selecionadas = st.multiselect("Selecione a(s) empresa(s)", df['empresa'].unique(), default=df['empresa'].unique())
 estados_selecionados = st.multiselect("Selecione o(s) estado(s)", df['LOCAL'].str.split(' - ').str[-1].unique(), default=df['LOCAL'].str.split(' - ').str[-1].unique())
 status_selecionados = st.multiselect("Selecione o(s) status", df['STATUS'].unique(), default=df['STATUS'].unique())
-tamanho_texto = st.slider("Selecione o tamanho do texto (descrição)", 0, df['DESCRICAO'].str.len().max())
+tamanho_texto = st.slider("Selecione o tamanho do texto (descrição)", 0, df['DESCRICAO'].str.len().max(),value=100)
 
 # Converter colunas de data (ANO, MES, DIA) para datetime
 df['DATA'] = pd.to_datetime(df[['ANO', 'MES', 'DIA']].astype(str).agg('-'.join, axis=1), format='%Y-%m-%d', errors='coerce')
