@@ -5,9 +5,9 @@ import seaborn as sns
 from datetime import datetime
 
 # Carregar os datasets
-hapvida = pd.read_csv(r'.\resources\RECLAMEAQUI_HAPVIDA.csv')
-ibyte = pd.read_csv(r'.\resources\RECLAMEAQUI_IBYTE.csv')
-nagem = pd.read_csv(r'.\resources\RECLAMEAQUI_NAGEM.csv')
+hapvida = pd.read_csv(r'..\resources\RECLAMEAQUI_HAPVIDA.csv')
+ibyte = pd.read_csv(r'..\resources\RECLAMEAQUI_IBYTE.csv')
+nagem = pd.read_csv(r'..\resources\RECLAMEAQUI_NAGEM.csv')
 
 # Adicionar uma coluna para identificar a empresa
 hapvida['empresa'] = 'Hapvida'
