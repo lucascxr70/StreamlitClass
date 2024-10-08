@@ -1,3 +1,7 @@
+# https://rlfhcsydmtre5rvsbvrppa.streamlit.app/
+# https://github.com/lucascxr70/StreamlitClass.git
+
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
