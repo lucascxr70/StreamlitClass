@@ -3,11 +3,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
+import os
 
-# Carregar os datasets
-hapvida = pd.read_csv(r'..\resources\RECLAMEAQUI_HAPVIDA.csv')
-ibyte = pd.read_csv(r'..\resources\RECLAMEAQUI_IBYTE.csv')
-nagem = pd.read_csv(r'..\resources\RECLAMEAQUI_NAGEM.csv')
+hapvida_path = os.path.join(os.getcwd(), 'resources', 'RECLAMEAQUI_HAPVIDA.csv')
+ibyte_path = os.path.join(os.getcwd(), 'resources', 'RECLAMEAQUI_IBYTE.csv')
+nagem_path = os.path.join(os.getcwd(), 'resources', 'RECLAMEAQUI_NAGEM.csv')
+
+hapvida = pd.read_csv(hapvida_path)
+ibyte = pd.read_csv(ibyte_path)
+nagem = pd.read_csv(nagem_path)
 
 # Adicionar uma coluna para identificar a empresa
 hapvida['empresa'] = 'Hapvida'
